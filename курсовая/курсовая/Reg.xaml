@@ -1,0 +1,67 @@
+﻿<Window x:Class="курсовая.Reg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:курсовая"
+        mc:Ignorable="d"
+        Title="Reg" Height="450" Width="500" Background="#0e697a">
+    <Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Grid.Column="0" Foreground="#f7f1f1" FontSize="35" FontFamily="Comic Sans MS" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Margin="0,0,10,0">Введите</TextBlock>
+        <TextBlock  Grid.Column="1" Foreground="#f7f1f1" FontSize="35" FontFamily="Comic Sans MS" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0">данные</TextBlock>
+        <!--ID-->
+        <TextBlock  Name="ID" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7" Grid.Row="1">ID:</TextBlock>
+        <TextBox Name="VvodID"  PreviewTextInput="VvodID_PreviewTextInput"  Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#ffa827" Height="20" Width="110"  Grid.Row="1" BorderThickness="0" />
+        <!--Fam-->
+        <TextBlock  Name="FAM" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7" Grid.Row="2">Фамилия:</TextBlock>
+        <TextBox Name="VvodFAM" TextChanged="VvodFAM_TextChanged" PreviewTextInput="FAM_PreviewTextInput"  Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#ffa827" Height="20" Width="110"  Grid.Row="2" BorderThickness="0" />
+        <!--Name-->
+        <TextBlock Name="NAme" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7"  Grid.Row="3">Имя:</TextBlock>
+        <TextBox  Name="NAmeVvod" TextChanged="NAmeVvod_TextChanged" PreviewTextInput="FAM_PreviewTextInput"  Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Background="#ffa827" Width="80" Grid.Row="3" BorderThickness="0"/>
+        <!--OT-->
+        <TextBlock Grid.Column="0" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7" Grid.Row="4">Отчество:</TextBlock>
+        <TextBox Background="#ffa827" TextChanged="VvodOt_TextChanged" Name="VvodOt"  PreviewTextInput="FAM_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Width="110"  Grid.Row="4" BorderThickness="0" />
+        <!--PAsport-->
+        <TextBlock Name="Pas" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7" Grid.Row="5">Паспорт:</TextBlock>
+        <!--PasSeria-->
+        <TextBlock Name="Seria" Foreground="#f7f1f1" FontSize="15" FontFamily="Comic Sans MS" Grid.Row="5" Grid.Column="1" Text="Серия:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,200,0"/>
+        <TextBox Name="VvodPas" MaxLength="4" PreviewTextInput="VvodID_PreviewTextInput" Margin="0,0,100,0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#ffa827" Grid.Row="5" MinHeight="10" MinWidth="50" BorderThickness="0"/>
+        <!--PasNomer-->
+        <TextBlock Name="Nomer" Grid.Row="5" Foreground="#f7f1f1" FontSize="15" FontFamily="Comic Sans MS" Grid.Column="1" Text="Номер:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox Name="VvodPasID" MaxLength="6" PreviewTextInput="VvodID_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#ffa827" Margin="145,0,0,0" Grid.Row="5" MinHeight="10" MinWidth="80" BorderThickness="0"/>
+        <!--Telefon-->
+        <TextBlock Grid.Column="0" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="6">Телефон:</TextBlock>
+        <TextBox x:Name="VvodNomer" MaxLength="10" PreviewTextInput="VvodID_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#ffa827" Grid.Row="6" Margin="50,0,0,0" MinHeight="20" MinWidth="100" BorderThickness="0"/>
+        <ComboBox SelectedIndex="0" Name="ComTel" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#ffa827" Grid.Row="6" Height="20" Width="47" BorderThickness="0,0,0,1" >
+        </ComboBox>
+        <!--Логин-->
+        <TextBlock Name="Login" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7"  Grid.Row="7">Логин:</TextBlock>
+        <TextBox  Name="VvodLogin" PreviewTextInput="VvodLogin_PreviewTextInput"  Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Background="#ffa827" Width="120" Grid.Row="7" BorderThickness="0"/>
+        <!--Пароль-->
+        <TextBlock Name="Par" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7"  Grid.Row="8">Пароль:</TextBlock>
+        <TextBox  Name="VvodPar" PreviewTextInput="VvodLogin_PreviewTextInput"  Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Background="#ffa827" Width="120" Grid.Row="8" BorderThickness="0"/>
+        <!--Кнопка-->
+        <Grid Grid.RowSpan="1" Grid.ColumnSpan="2" Grid.Row="9">
+            <Button x:Name="BT2" Click="BT2_Click" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Height="50" Width="80" BorderThickness="0" >Закрыть</Button>
+            <Button x:Name="BT3" Click="BT3_Click" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Height="50" Width="95" BorderThickness="0,0,0,3">Стереть</Button>
+            <Button x:Name="BT1" Click="BT1_Click" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Height="50" Width="95" BorderThickness="0" >Записать в файл</Button>
+        </Grid>
+    </Grid>
+</Window>

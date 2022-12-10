@@ -1,0 +1,40 @@
+﻿<Page x:Class="курсовая.BronPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:курсовая"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FindHotel">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="dtgBron" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="20" AutoGenerateColumns="False" Height="225" Width="640" Grid.Row="0" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn FontFamily="Comic Sans MS" FontSize="15" Header="Номер комнаты" Binding="{Binding id}"/>
+                <DataGridTextColumn FontFamily="Comic Sans MS" FontSize="15" Header="Гостиница" Binding="{Binding hotel}"/>
+                <DataGridTextColumn FontFamily="Comic Sans MS" FontSize="15" Header="Комната" Binding="{Binding Room}"/>
+                <DataGridTextColumn FontFamily="Comic Sans MS" FontSize="15" Header="Статус" Binding="{Binding Bron1}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="1">
+            <TextBlock Foreground="#f7f1f1"  FontFamily="Comic Sans MS" FontSize="20" Name="textBl1" Width="500" Height="30" VerticalAlignment="Top" Text="Введите комнату и нажмите кнопку забронировать" HorizontalAlignment="Left"></TextBlock>
+            <!--<ComboBox DisplayMemberPath="hotel" Background="#ffa827" BorderThickness="0" Name="textB1" Width="150" Height="20" VerticalAlignment="Top" Margin="0,30,0,0" HorizontalAlignment="Left"></ComboBox>
+            <ComboBox  Background="#ffa827" BorderThickness="0" Name="textB2" Width="150" Height="20" VerticalAlignment="Top" Margin="180,30,0,0" HorizontalAlignment="Left"></ComboBox>-->
+            <Button Name="bt1" Click="bt1_Click" Width="120" Height="70" Content="Записаться" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Margin="0,0,300,0"></Button>
+            <Button x:Name="backBT" Click="backBT_Click" Width="120" Height="70" Content="Назад" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" ></Button>
+            <Button x:Name="deleteBT" Click="deleteBT_Click" Width="140" Height="70" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Margin="300,0,0,0">
+                <TextBlock>Удалить<LineBreak/>бронирование</TextBlock>
+            </Button>
+            <Button x:Name="addBt" Click="addBt_Click" Width="120" Height="70" FontFamily="Comic Sans MS" FontSize="20"  Foreground="#f7f1f1" Background="#db6300" Margin="600,0,0,0">
+                <TextBlock>Добавить <LineBreak/> номера</TextBlock>
+            </Button>
+            <Button Name="refresh" Click="refresh_Click" Width="120" Height="70" Content="Обновить" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Margin="0,0,600,0"></Button>
+        </Grid>
+    </Grid>
+</Page>

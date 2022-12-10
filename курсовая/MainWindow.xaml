@@ -1,0 +1,38 @@
+﻿<Window x:Class="курсовая.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:курсовая"
+        mc:Ignorable="d"
+        Icon="Resources\3.png"
+        Title="FindHotel" Height="400" Width="450" Background="#0e697a">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="resources\3.png" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Row="0" ></Image>
+        <!--Авторизация-->
+        <TextBlock  Foreground="#f7f1f1" FontSize="35" FontFamily="Comic Sans MS" Grid.Row="0" Grid.ColumnSpan="2" Text="Авторизация" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+        <!--Поле логина-->
+        <TextBlock Foreground="#f7f1f1"  FontFamily="Comic Sans MS" FontSize="20"  Text="Login:" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1" />
+        <TextBox Background="#ffa827" x:Name="loginV" HorizontalAlignment="Left"  Grid.Row="1" Grid.Column="1" Height="20" Width="100" BorderThickness="0"  />
+        <!--Поле пароля-->
+        <TextBlock  Foreground="#f7f1f1"  FontFamily="Comic Sans MS" FontSize="20" Text="Password:" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="2" />
+        <PasswordBox  Background="#ffa827" x:Name="passwordV" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" Height="20" Width="100" BorderThickness="0" ></PasswordBox>
+        <!--Кнопки-->
+        <Grid Grid.ColumnSpan="2" Grid.Row="3">
+            <Button FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" HorizontalAlignment="Left" Height="50" Width="100" Click="Button_Click" BorderThickness="0" >Войти</Button>
+            <Button FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" HorizontalAlignment="Right" Height="50" Width="100" Click="Button_Click_1" BorderThickness="0">Выйти</Button>
+            <Button FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" HorizontalAlignment="Center" Height="50" Width="120" Click="Button_Click_2" BorderThickness="0">Регистрация</Button>
+        </Grid>
+    </Grid>
+</Window>

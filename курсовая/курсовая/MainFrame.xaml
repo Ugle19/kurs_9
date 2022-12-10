@@ -1,0 +1,28 @@
+﻿<Window x:Class="курсовая.AllHotel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:курсовая"
+        mc:Ignorable="d"
+        Title="AllHotel" Height="450" Width="800" Background="#0e697a">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Background="#26697a" Grid.Row="0"  Grid.Column="0">
+            <Button x:Name="bt1" Width="120" Height="30" VerticalAlignment="Top" Margin="0,20,0,0" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Click="bt1_Click">Отели</Button>
+            <Button x:Name="bt2" Width="150" Height="30" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300">Забронировать</Button>
+            <Button x:Name="bt3" Width="120" Height="30" VerticalAlignment="Bottom" Margin="0,0,0,20" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Click="bt3_Click">Выход</Button>
+        </Grid>
+        <Grid Background="#26697a" Grid.Row="2" Grid.Column="0">
+            <Button Name="bt4" Width="150" Height="30" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300">Обновить</Button>
+        </Grid>
+        <Frame HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Name="FrameName" />
+    </Grid>
+</Window>

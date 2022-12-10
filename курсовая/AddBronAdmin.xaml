@@ -1,0 +1,45 @@
+﻿<Window x:Class="курсовая.AddBronAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:курсовая"
+        mc:Ignorable="d"
+        Icon="Resources\3.png"
+        Title="FindHotel" Height="450" Width="500" Background="#0e697a">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--ID-->
+        <TextBlock  Name="ID" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7" Grid.Row="1">ID:</TextBlock>
+        <TextBox Name="VvodID" MaxLength="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#ffa827" Height="20" Width="110"  Grid.Row="1" BorderThickness="0" />
+        <!--Ввод-->
+        <TextBlock  Grid.Column="0" Foreground="#f7f1f1" FontSize="35" FontFamily="Comic Sans MS" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Margin="0,0,10,0">Введите</TextBlock>
+        <TextBlock  Grid.Column="1" Foreground="#f7f1f1" FontSize="35" FontFamily="Comic Sans MS" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0">данные</TextBlock>
+        <!--Название-->
+        <TextBlock  Name="Name" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7" Grid.Row="2">Название:</TextBlock>
+        <TextBox Name="VvodName" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#ffa827" Height="20" Width="110"  Grid.Row="2" BorderThickness="0" />
+        <!--Город-->
+        <TextBlock  Name="City" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7" Grid.Row="3">Комната:</TextBlock>
+        <TextBox Name="VvodNomer" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#ffa827" Height="20" Width="110"  Grid.Row="3" BorderThickness="0" />
+        <!--Адрес-->
+        <TextBlock Name="Адрес" Foreground="#f7f1f1" FontSize="25" FontFamily="Comic Sans MS" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,7"  Grid.Row="4">Статус:</TextBlock>
+        <TextBox  Name="VvodStatus" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Background="#ffa827" Width="120" Grid.Row="4" BorderThickness="0"/>
+        <!--Кнопка-->
+        <Grid Grid.RowSpan="1" Grid.ColumnSpan="2" Grid.Row="5">
+            <Button x:Name="BT2" Click="BT2_Click" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Height="50" Width="80" BorderThickness="0" >Закрыть</Button>
+            <Button x:Name="BT3" Click="BT3_Click" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Height="50" Width="95" BorderThickness="0,0,0,3">Стереть</Button>
+            <Button x:Name="BT1" Click="BT1_Click" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Comic Sans MS" FontSize="20" Foreground="#f7f1f1" Background="#db6300" Height="50" Width="95" BorderThickness="0" >Записать в файл</Button>
+        </Grid>
+    </Grid>
+</Window>
